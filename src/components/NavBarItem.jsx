@@ -1,9 +1,11 @@
 
 import React from 'react'
 
-function NavBarItem() {
+function NavBarItem({ title, param }) {
   return (
-    <div>NavBarItem</div>
+    <div>
+        {title}
+    </div>
   )
 }
 
