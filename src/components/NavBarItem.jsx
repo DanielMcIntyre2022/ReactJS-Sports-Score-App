@@ -1,6 +1,4 @@
 
-import React from 'react'
-
 function NavBarItem({ title, param }) {
   return (
     <div>

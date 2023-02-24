@@ -1,5 +1,6 @@
 import './App.css';
 import axios from "axios";
+import { Routes, Route } from 'react-router-dom'
 import Header from './components/Header';
 import NavBar from './components/NavBar';
 
@@ -10,8 +11,7 @@ const options = {
   headers: {
 	'X-RapidAPI-Key':  process.env.REACT_APP_API_KEY,
 	'X-RapidAPI-Host': process.env.REACT_API_API_HOST,
-}
-};
+}};
 
 axios.request(options).then(function (response) {
 	console.log(response.data);
@@ -22,11 +22,13 @@ axios.request(options).then(function (response) {
 function App() {
   return (
     <div className="App">
-      {/* Header */}
-      <Header/>
-      {/* Navbar */}
-      <NavBar/>
-      {/* Display Results */}
+      <Routes>
+          {/* Header */}
+          <Header/>
+          {/* Navbar */}
+          <NavBar/>
+          {/* Display Results */}
+      </Routes>
     </div>
   );
 };
